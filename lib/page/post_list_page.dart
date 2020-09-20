@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:postloader_fl/model/data_model.dart';
+import 'package:shimmer/shimmer.dart';
 
 class PostList extends StatelessWidget {
   final List<PhotoData> photos;
