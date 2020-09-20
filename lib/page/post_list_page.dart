@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:postloader_fl/model/data_model.dart';
-import 'package:shimmer/shimmer.dart';
+import 'package:postloader_fl/page/post_item_page.dart';
 
 class PostList extends StatelessWidget {
   final List<PhotoData> photos;
@@ -15,9 +15,12 @@ class PostList extends StatelessWidget {
         itemBuilder: (context, index) => Container(
           child: Column(
             children: [
-              Container(
-                margin: const EdgeInsets.only(top: 20, right: 20, left: 20, bottom: 5),
-                child: Image.network(photos[index].url),
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => PostItem(photos: photos, index: index))),
+                child: Container(
+                  margin: const EdgeInsets.only(top: 20, right: 20, left: 20, bottom: 5),
+                  child: Image.network(photos[index].url),
+                ),
               ),
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 20),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shimmer/shimmer.dart';
+
+import '../util.dart';
 
 class ShimmerList extends StatelessWidget {
 
@@ -12,29 +13,12 @@ class ShimmerList extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                margin: const EdgeInsets.only(top: 20, right: 20, left: 20, bottom: 5),
-                child: Shimmer.fromColors(
-                  baseColor: Colors.grey,
-                  highlightColor: Colors.grey[200],
-                    child: Container(
-                      height: 300,
-                      width: 300,
-                      color: Colors.white,
-                    ),
-                ),
+                margin: const EdgeInsets.only(top: 20, right: 20, left: 20, bottom: 15),
+                child: onShim(300, 300, null),
               ),
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 20),
-                child: Shimmer.fromColors(
-                  baseColor: Colors.grey,
-                  highlightColor: Colors.grey[200],
-                  child: Container(
-                    margin: const EdgeInsets.only(top: 10),
-                    height: 20,
-                    width: 280,
-                    color: Colors.white,
-                  ),
-                ),
+                child: onShim(20, 280, null),
               ),
             ],
           ),

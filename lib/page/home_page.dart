@@ -8,7 +8,6 @@ import 'package:http/http.dart' as http;
 import 'package:postloader_fl/page/shimmer_list_page.dart';
 
 class HomePage extends StatelessWidget {
-  final photoData = List<PhotoData>();
 
   @override
   Widget build(BuildContext context) {
