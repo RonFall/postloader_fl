@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:postloader_fl/page/home_page.dart';
 
-void main() => runApp(App());
+void main() => runApp(PostLoaderApp());
 
-class App extends StatelessWidget {
+class PostLoaderApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
     return MaterialApp(
-      title: 'PhotoLoader',
+      title: 'PostLoader',
       debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
