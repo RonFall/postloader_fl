@@ -7,9 +7,6 @@ onShim(double height, double width, EdgeInsets margin) => Shimmer.fromColors(
   child: Container(
     margin: margin,
     height: height,
-
-
-
     width: width,
     color: Colors.white,
   ),
